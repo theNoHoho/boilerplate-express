@@ -17,12 +17,13 @@ app.use(express.static(__dirname + "/public"));
     res.json({"message": "Hello json"})
 });*/
 
-if (process.env.MESSAGE_STYLE=uppercase){
+var responsejson = "Hello json"
+if (process.env.VAR_NAME==='allCaps'){
+response = responsejson.toUpperCase};
+
 app.get("/json", (req, res) => {
-  res.json({"message": "Hello json"})
-})};
-
-
+    res.json({"message": responsejson})
+});
 
 
 
