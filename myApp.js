@@ -18,7 +18,7 @@ app.use(express.static(__dirname + "/public"));
 });*/
 
 var responsejson = "Hello json"
-if (process.env.VAR_NAME==='allCaps'){
+if (process.env.MESSAGE_STYLE==='allCaps'){
 response = responsejson.toUpperCase};
 
 app.get("/json", (req, res) => {
