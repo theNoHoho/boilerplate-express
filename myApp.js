@@ -26,13 +26,13 @@ app.use(express.static(__dirname + "/public"));
   }
 });*/
 
-var msg = "Hello json";
-if(process.env.MESSAGE_STYLE === 'uppercase') {
-  msg = "HELLO JSON"
-};
-console.log(msg); //debug
 app.get("/json", (req, res) => {
-    res.json({"message": msg})
+  var msg = "Hello json";
+  if(process.env.MESSAGE_STYLE === 'uppercase') {
+    msg = "HELLO JSON"
+  };
+  console.log(msg); //debug
+  res.json({"message": msg})
 });
 
 
