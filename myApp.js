@@ -26,7 +26,7 @@ app.use(express.static(__dirname + "/public"));
   }
 });*/
 
-var msg = "Hello json"
+var msg = "Hello json";
 if(process.env.MESSAGE_STYLE === 'uppercase') {
   msg = msg.toUpperCase
 };
