@@ -1,7 +1,14 @@
 var express = require('express');
 var app = express();
 
-console.log("Hello World");
+//var logval = req.method + " " + req.path + " - " + req.ip;
+
+app.use(function middleware (req, res, next) {
+  console.log (req.method + ' ' + req.path + ' - ' + req.ip)
+  next()
+});
+
+//console.log("Hello World");
 
 /*app.get("/", (req, res) => {
   res.send('Hello Express');
@@ -24,13 +31,6 @@ app.get("/json",function(req,res){
   else {
     res.json({"message":"Hello json"})
   }
-});
-
-//var logval = req.method + " " + req.path + " - " + req.ip;
-
-app.use(function middleware (req, res, next) {
-  console.log (req.method + ' ' + req.path + ' - ' + req.ip)
-  next()
 });
 
 
