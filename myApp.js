@@ -32,7 +32,6 @@ app.use(function middleware (req, res, next) {
   console.log (req.method + " " + req.path + " - " + req.ip)
   next()
 });
-ß
 
 
 
