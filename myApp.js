@@ -1,10 +1,8 @@
 var express = require('express');
 var app = express();
 
-var logval = req.method + " " + req.path + " - " + req.ip;
-
 app.use(function middleware (req, res, next) {
-  console.log (logval)
+  console.log (var logval = req.method + " " + req.path + " - " + req.ip)
   next()
 });
 
