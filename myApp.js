@@ -26,10 +26,10 @@ app.get("/json",function(req,res){
   }
 });
 
-var logval = req.method + " " + req.path + " - " + req.ip;
+//var logval = req.method + " " + req.path + " - " + req.ip;
 
 app.use(function middleware (req, res, next) {
-  console.log (logval)
+  console.log (req.method + " " + req.path + " - " + req.ip)
   next()
 });
 ß
