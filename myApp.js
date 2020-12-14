@@ -26,10 +26,11 @@ app.get("/json",function(req,res){
   }
 });
 
+var string = req.method + " " + req.path + " - " + req.ip;
+
 app.use(function middleware (req, res, next) {
-  var string = req.method + " " + req.path + " - " + req.ip;
-  console.log (string);
-  next();
+  console.log (string)
+  next()
 });
 ß
 
